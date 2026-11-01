@@ -1,4 +1,4 @@
-param([switch]$CheckOnly)
+﻿param([switch]$CheckOnly)
 $ErrorActionPreference = 'Stop'
 Add-Type -AssemblyName System.Net.Http
 # Codex can inherit PSModulePath from PowerShell 7. Load Windows' own DPAPI

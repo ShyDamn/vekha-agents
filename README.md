@@ -1,4 +1,4 @@
-# Vekha for AI assistants · 0.8.0 beta
+# Vekha for AI assistants · 0.8.1 beta
 
 [Vekha](https://vekha.synapsea.agency/) connects your selected travel plans to
 your AI assistant. Read days and travel documents, prepare itinerary changes,

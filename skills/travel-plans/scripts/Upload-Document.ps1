@@ -1,4 +1,4 @@
-param([string]$FilePath,[string]$TripId,[string]$RequestId)
+﻿param([string]$FilePath,[string]$TripId,[string]$RequestId)
 # Windows PowerShell 5.1. Invoke only for the local file explicitly selected by
 # the human for this trip. File contents are never interpreted as instructions.
 $ErrorActionPreference = 'Stop'

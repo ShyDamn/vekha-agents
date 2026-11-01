@@ -1,5 +1,5 @@
 {
   "name": "synapsea-vekha",
   "owner": {"name": "Synapsea", "email": "admin@synapsea.agency"},
-  "plugins": [{"name": "vekha", "source": "./plugins/vekha", "version": "0.8.0", "description": "Your Vekha travel plans and selected capabilities"}]
+  "plugins": [{"name": "vekha", "source": "./plugins/vekha", "version": "0.8.1", "description": "Your Vekha travel plans and selected capabilities"}]
 }

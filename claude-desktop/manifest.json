@@ -2,7 +2,7 @@
   "manifest_version": "0.3",
   "name": "vekha",
   "display_name": "Vekha",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "Connect selected Vekha plans and explicitly granted documents, budgets and members. Preview changes before applying.",
   "author": {"name": "Synapsea", "email": "admin@synapsea.agency"},
   "homepage": "https://vekha.synapsea.agency/api/ai",

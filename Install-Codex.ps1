@@ -1,4 +1,4 @@
-param([switch]$SkipConnect)
+﻿param([switch]$SkipConnect)
 $ErrorActionPreference = 'Stop'
 # The Windows adapter owns a clear connection form and CurrentUser DPAPI storage.
 # No credential is written into a manifest, environment, command or Codex config.

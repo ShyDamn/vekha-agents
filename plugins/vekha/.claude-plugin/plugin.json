@@ -1,6 +1,6 @@
 {
   "name": "vekha",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "Plan selected trips and use explicitly granted documents, budgets and members with atomic previews and booking protection.",
   "author": {"name": "Synapsea", "email": "admin@synapsea.agency"},
   "homepage": "https://vekha.synapsea.agency/api/ai",
