@@ -1,0 +1,12 @@
+{
+  "name": "vekha",
+  "version": "0.8.0",
+  "description": "Plan selected trips and use explicitly granted documents, budgets and members with atomic previews and booking protection.",
+  "author": {"name": "Synapsea", "email": "admin@synapsea.agency"},
+  "homepage": "https://vekha.synapsea.agency/api/ai",
+  "repository": "https://github.com/ShyDamn/vekha-agents",
+  "license": "MIT",
+  "keywords": ["travel", "MCP", "itinerary"],
+  "userConfig": {"api_token": {"type": "string", "title": "Vekha API key", "description": "Create a free key in Vekha → Settings → AI assistants. Paste it here, never in chat.", "required": true, "sensitive": true}},
+  "mcpServers": {"vekha": {"type": "http", "url": "https://vekha.synapsea.agency/api/v1/ai/mcp", "headers": {"Authorization": "Bearer ${user_config.api_token}"}}}
+}

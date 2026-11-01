@@ -1,0 +1,4 @@
+{
+  "inputs": [{"id":"vekha-api-key","type":"promptString","description":"Vekha scoped API key (create in Settings → AI assistants)","password":true}],
+  "servers": {"vekha":{"type":"http","url":"https://vekha.synapsea.agency/api/v1/ai/mcp","headers":{"Authorization":"Bearer ${input:vekha-api-key}"}}}
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "vekha": {
+      "type": "streamable-http",
+      "url": "https://vekha.synapsea.agency/api/v1/ai/mcp",
+      "extensions": {"com.openai": {"auth": {"type": "oauth", "client": {"mode":"cimd"}, "baseScopes":["vekha.connect"], "resource":"https://vekha.synapsea.agency/api/v1/ai/mcp"}}}
+    }
+  }
+}

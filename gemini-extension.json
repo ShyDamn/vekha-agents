@@ -1,0 +1,19 @@
+{
+  "name": "vekha",
+  "version": "0.8.0",
+  "description": "Plan selected Vekha trips with previews, fixed-booking protection and scoped travel documents.",
+  "contextFileName": "GEMINI.md",
+  "mcpServers": {
+    "vekha": {
+      "command": "node",
+      "args": ["${extensionPath}/server/index.mjs"],
+      "env": {"VEKHA_API_KEY": "${VEKHA_API_KEY}"}
+    }
+  },
+  "settings": [{
+    "name": "Vekha API key",
+    "description": "Create a free scoped key in Vekha Settings → AI assistants. Enter it in this protected prompt, never in chat. Node.js 22+ is required.",
+    "envVar": "VEKHA_API_KEY",
+    "sensitive": true
+  }]
+}

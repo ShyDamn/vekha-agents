@@ -1,0 +1,5 @@
+{
+  "name": "synapsea-vekha",
+  "interface": {"displayName": "Vekha"},
+  "plugins": [{"name": "vekha", "source": {"source": "local", "path": "./plugins/vekha"}, "policy": {"installation": "AVAILABLE", "authentication": "ON_INSTALL"}, "category": "Productivity"}]
+}

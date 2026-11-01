@@ -1,0 +1,20 @@
+{
+  "name": "vekha",
+  "version": "0.8.0",
+  "description": "Plan selected Vekha trips with previews, fixed-booking protection and scoped travel documents.",
+  "contextFileName": "QWEN.md",
+  "mcpServers": {
+    "vekha": {
+      "command": "node",
+      "args": ["${extensionPath}/server/index.mjs"],
+      "env": {"VEKHA_API_KEY": "${VEKHA_API_KEY}"},
+      "timeout": 60000
+    }
+  },
+  "settings": [{
+    "name": "Vekha API key",
+    "description": "Create a free scoped key in Vekha Settings → AI assistants. Enter it in the sensitive extension setting, never in chat. Node.js 22+ is required.",
+    "envVar": "VEKHA_API_KEY",
+    "sensitive": true
+  }]
+}
