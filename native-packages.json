@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "packages": [
+    {
+      "client": "gemini",
+      "files": [
+        "gemini-extension.json",
+        "GEMINI.md",
+        "LICENSE",
+        "SECURITY.md",
+        "server/index.mjs",
+        "skills/travel-plans/SKILL.md",
+        "skills/travel-plans/references/connection.md",
+        "skills/travel-plans/references/document-import.md",
+        "skills/travel-plans/references/finance-members.md",
+        "skills/travel-plans/scripts/Upload-Document.ps1"
+      ]
+    },
+    {
+      "client": "qwen",
+      "files": [
+        "qwen-extension.json",
+        "QWEN.md",
+        "LICENSE",
+        "SECURITY.md",
+        "server/index.mjs",
+        "skills/travel-plans/SKILL.md",
+        "skills/travel-plans/references/connection.md",
+        "skills/travel-plans/references/document-import.md",
+        "skills/travel-plans/references/finance-members.md",
+        "skills/travel-plans/scripts/Upload-Document.ps1"
+      ]
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-# Vekha for AI assistants · 0.8.1 beta
+# Vekha for AI assistants · 0.8.2 beta
 
 [Vekha](https://vekha.synapsea.agency/) connects your selected travel plans to
 your AI assistant. Read days and travel documents, prepare itinerary changes,
@@ -29,11 +29,17 @@ key in chat or the terminal. Check `/mcp` after configuration.
 Install with the official Gemini CLI (Node.js 22+ available to MCP servers):
 
 ```sh
-gemini extensions install https://github.com/ShyDamn/vekha-agents
+gemini extensions install https://github.com/ShyDamn/vekha-agents --ref v0.8.2
 ```
 
-The sensitive **Vekha API key** installation prompt uses Gemini's credential
-storage. Change it with `gemini extensions config vekha`; inspect `/mcp`.
+Alternatively, download the [native Gemini ZIP](https://github.com/ShyDamn/vekha-agents/releases/download/v0.8.2/vekha-gemini-0.8.2.zip),
+extract it into `vekha-gemini-0.8.2`, then run
+`gemini extensions install ./vekha-gemini-0.8.2`. Gemini CLI 0.66 accepts a local
+directory, not a local ZIP file or a direct ZIP installation URL. The native
+archive contains only the Gemini extension. Enter your key in its sensitive
+**Vekha API key** installation prompt.
+Change it with `gemini extensions config vekha`; inspect `/mcp`. Verify the
+client's credential-storage backend before using a real key.
 No install hook, downloaded executable, dependency install or blanket tool
 approval is added. This targets **Gemini CLI**, not the regular Gemini chat.
 
@@ -43,18 +49,21 @@ Use a current official Qwen Code release with native extension settings and
 Node.js 22+:
 
 ```sh
-qwen extensions install https://github.com/ShyDamn/vekha-agents
+qwen extensions install https://github.com/ShyDamn/vekha-agents/releases/download/v0.8.2/vekha-qwen-0.8.2.zip
 ```
 
-Enter your key in the sensitive extension setting. To change it interactively:
+Use the native archive, not the repository root: Qwen also understands Claude
+marketplaces and can otherwise select the wrong installer. Enter your key in
+the sensitive extension setting. To change it interactively:
 
 ```sh
 qwen extensions settings set vekha "Vekha API key" --scope user
 ```
 
-Do not append the key to the command. Confirm your Qwen version uses secure
-storage for sensitive settings; do not put a populated key into a project
-`.env`/settings file. This targets **Qwen Code**, not the regular Qwen chat.
+Do not append the key to the command. Qwen can select its encrypted-file backend
+when the OS keychain is unavailable; verify the backend on your own device.
+Never put a populated key into a project `.env`/settings file. This targets
+**Qwen Code**, not the regular Qwen chat.
 
 ## ChatGPT and Codex
 
@@ -108,8 +117,8 @@ chat is claimed; xAI API remote MCP is a different product.
 | Codex Windows | Existing DPAPI installer | Earlier project acceptance; 0.8 upgrade still needs device/client check |
 | Claude Desktop | Existing MCPB sensitive field | Earlier package validation; fresh 0.8 check pending |
 | Claude Code | Marketplace + sensitive configuration | Manifest/local validation; live trip acceptance pending |
-| Gemini CLI | Native manifest + sensitive setting + stdio bridge | Package/bridge validation; client acceptance pending |
-| Qwen Code | Native manifest + sensitive setting + stdio bridge | Package/bridge validation; client acceptance pending |
+| Gemini CLI 0.66.0 | Native directory + sensitive setting + stdio bridge | Offline install/prompt/list/uninstall passed; native OS keychain and model/Vekha session still need acceptance |
+| Qwen Code 0.26.5 | Native ZIP + sensitive setting + stdio bridge | Offline install/prompt/list/uninstall passed using encrypted-file fallback; native OS keychain and model/Vekha session still need acceptance |
 | VS Code MCP runtime | Password-input template | Configuration prepared; client acceptance pending |
 
 Do not publish real personal trips as test data. A vendor may require publisher

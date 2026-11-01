@@ -1,6 +1,6 @@
 {
   "name": "vekha",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "description": "Plan selected Vekha trips with previews, fixed-booking protection and scoped travel documents.",
   "contextFileName": "GEMINI.md",
   "mcpServers": {
