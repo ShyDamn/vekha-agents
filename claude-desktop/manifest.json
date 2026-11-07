@@ -2,7 +2,7 @@
   "manifest_version": "0.3",
   "name": "vekha",
   "display_name": "Vekha",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "description": "Connect selected Vekha plans and explicitly granted documents, budgets and members. Preview changes before applying.",
   "author": {
     "name": "Synapsea",

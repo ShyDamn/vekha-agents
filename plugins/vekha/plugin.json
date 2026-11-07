@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "vekha",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "description": "Plan selected Vekha trips, import checked documents and manage explicitly granted budgets and members with previews and conflict checks.",
   "author": {
     "name": "Synapsea",
@@ -21,7 +21,7 @@
       "interface": {
         "displayName": "Vekha",
         "shortDescription": "Your travel plans, connected",
-        "longDescription": "Read selected Vekha trips, plan days, manage checklists and import travel documents. Budgets, participants and creator drafts require separate permissions. Preview edits before saving and preserve fixed bookings. Current and future allowed trip documents are included; passports, insurance and unshared participant documents are excluded. Vekha does not give this plugin access to Gmail, a photo library, a bank account or payments. Group announcements require approval in Vekha. Connect with OAuth and choose trips and permissions in the app. Availability is subject to the Vekha beta and your AI client's capabilities.",
+        "longDescription": "Read selected Vekha trips, plan days, manage checklists and import travel documents. Budgets, participants and creator drafts require separate permissions. Preview edits before saving. Fixed-time changes require exact account approval and affect the plan only; tickets and bookings are not changed. Current and future allowed trip documents are included; passports, insurance and unshared participant documents are excluded. Vekha does not give this plugin access to Gmail, a photo library, a bank account or payments. Group announcements require approval in Vekha. Connect with OAuth and choose trips and permissions in the app. Availability is subject to the Vekha beta and your AI client's capabilities.",
         "developerName": "Synapsea",
         "category": "Productivity",
         "capabilities": [
@@ -62,6 +62,12 @@
               "expected_behavior": "Use the current revisions, preview a supported task command and verify the saved task. Do not overwrite unrelated entries."
             },
             {
+              "description": "Review a fixed-time plan change in Vekha",
+              "prompt": "Move the fixed train in the connected test trip 30 minutes later.",
+              "tools_triggered": "read_plan, preview_plan_changes",
+              "expected_behavior": "Keep the fixed-time preview to schedule-only item changes. Show only its in-app review route; the signed-in key owner with current trip edit access approves the exact schedule in Vekha, which applies that preview immediately. This changes only the plan, never the ticket or booking."
+            },
+            {
               "description": "Read an allowed travel document",
               "prompt": "List allowed documents in the test trip and read the sample booking text.",
               "tools_triggered": "list_documents, read_document_text",
@@ -95,7 +101,7 @@
         "translations": {
           "ru-RU": {
             "subtitle": "Поездки рядом с вашим AI",
-            "description": "Планы, дела и разрешённые документы выбранных поездок. Изменения проходят предпросмотр; личные документы исключены. Gmail, галерея и платежи через плагин недоступны."
+            "description": "Планы, дела и разрешённые документы выбранных поездок. Изменения проходят предпросмотр; закреплённое время меняется в плане только после точного подтверждения в аккаунте. Билеты и брони не меняются. Личные документы, Gmail, галерея и платежи недоступны."
           }
         }
       }

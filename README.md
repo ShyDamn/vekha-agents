@@ -1,4 +1,4 @@
-# Vekha for AI assistants · 0.8.2 beta
+# Vekha for AI assistants · 0.8.3 beta
 
 [Vekha](https://vekha.synapsea.agency/) connects your selected travel plans to
 your AI assistant. Read days and travel documents, prepare itinerary changes,
@@ -29,12 +29,12 @@ key in chat or the terminal. Check `/mcp` after configuration.
 Install with the official Gemini CLI (Node.js 22+ available to MCP servers):
 
 ```sh
-gemini extensions install https://github.com/ShyDamn/vekha-agents --ref v0.8.2
+gemini extensions install https://github.com/ShyDamn/vekha-agents --ref v0.8.3
 ```
 
-Alternatively, download the [native Gemini ZIP](https://github.com/ShyDamn/vekha-agents/releases/download/v0.8.2/vekha-gemini-0.8.2.zip),
-extract it into `vekha-gemini-0.8.2`, then run
-`gemini extensions install ./vekha-gemini-0.8.2`. Gemini CLI 0.66 accepts a local
+Alternatively, download the [native Gemini ZIP](https://github.com/ShyDamn/vekha-agents/releases/download/v0.8.3/vekha-gemini-0.8.3.zip),
+extract it into `vekha-gemini-0.8.3`, then run
+`gemini extensions install ./vekha-gemini-0.8.3`. Gemini CLI 0.66 accepts a local
 directory, not a local ZIP file or a direct ZIP installation URL. The native
 archive contains only the Gemini extension. Enter your key in its sensitive
 **Vekha API key** installation prompt.
@@ -49,7 +49,7 @@ Use a current official Qwen Code release with native extension settings and
 Node.js 22+:
 
 ```sh
-qwen extensions install https://github.com/ShyDamn/vekha-agents/releases/download/v0.8.2/vekha-qwen-0.8.2.zip
+qwen extensions install https://github.com/ShyDamn/vekha-agents/releases/download/v0.8.3/vekha-qwen-0.8.3.zip
 ```
 
 Use the native archive, not the repository root: Qwen also understands Claude
